@@ -8,13 +8,18 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
 
+    # Step to install any necessary dependencies or build tools.
+    # This assumes you have a `make` target named `dependencies`.
+    # If your Makefile doesn't need this step, it can be modified or removed.
     - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install nasm
+
+    - name: Compile and build
       run: make
 
     - name: Run check
