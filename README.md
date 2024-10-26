@@ -2,4 +2,4 @@
 
 This is a project for me to learn Assembly.
 
-Spelled: "felisian os"
+pronounced: "felisian os"
